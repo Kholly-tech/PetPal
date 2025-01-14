@@ -3,10 +3,14 @@ import { createBrowserRouter, Outlet,RouterProvider, useNavigate } from 'react-r
 import { useDispatch, useSelector } from 'react-redux';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
+import NotFound from '../components/NotFound';
+import ComingSoon from '../components/ComingSoon';
+import Gallery from '../pages/Gallery';
+import Contact from '../pages/Contact';
 
 // Protected Routes
 const ProtectedRoutes = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const { isAuthenticated, currentUser } = useSelector((state) => state.auth);
 
@@ -26,7 +30,7 @@ const ProtectedRoutes = () => {
     }
   }, [isAuthenticated, dispatch]);
 
-  if(loading) return <h1>Loading</h1>;
+  if(loading) return <h1>Loading the Page</h1>;
   // if(!isAuthenticated) return <h1>SignIn</h1>;
   return <Outlet />;
 }
@@ -56,6 +60,7 @@ const router = createBrowserRouter([
             path: "/home",
             element: <Home />,
           },
+          {path: '/', element: <Home />},
           {
             path: "/signin",
             element: <h1>About</h1>,
@@ -71,7 +76,12 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
           {path: '/profile', element: <h1>Profile</h1>},
-          {path: '/*', element: <h1>Not Found</h1>},
+          {path: '/adoption', element: <ComingSoon />},
+          {path: '/blog', element: <ComingSoon />},
+          {path: '/gallery', element: <Gallery />},
+          {path: '/about', element: <ComingSoon />},
+          {path: '/contact', element: <Contact />},
+          {path: '/*', element: <NotFound />},
         ]
       }
     ],
