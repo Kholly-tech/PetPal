@@ -29,9 +29,9 @@ const Home = () => {
 
         <div className="justify-center flex mt-8">
           <div className="flex -space-x-2">
-            {[1,2,3].map((item,i)=>(
+            {[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d,https://images.unsplash.com/photo-1438761681033-6461ffad8d80,https://images.unsplash.com/photo-1500648767791-00dcc994a43e].map((item,i)=>(
               <div key={i} className="w-12 h-12 transform hover:-translate-y-2 transition-transform duration-300">
-                <ImageHolder image={nella} />
+                <ImageHolder image={item} />
               </div>
             ))}
           </div>
