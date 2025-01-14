@@ -42,7 +42,7 @@ const UnProtectedRoutes = () => {
 
   useEffect(() => {
     if(isAuthenticated) {
-      navigate("/home");
+      navigate("/");
     }
   },[isAuthenticated, navigate]);
   return <Outlet />;
