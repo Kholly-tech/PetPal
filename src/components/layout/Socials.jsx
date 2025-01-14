@@ -25,7 +25,7 @@ const Socials = () => {
               <Icon icon="simple-icons:gmail" width="24" height="24" />
           </a>
         </div>
-        <div className="text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+        <div className="text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:ml-4">
           <p class name='md:ml-6'>Developed by KOL-CONCEPTS © {currentYear} - All Rights Reserved @ <a href='/'>PetPal</a></p>
         </div>
       </div>
