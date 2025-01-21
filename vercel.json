@@ -1,19 +1,21 @@
 {
     "version": 2,
-    "builds": [
+    "projects": [
       {
-        "src": "PetPalBackend/index.js",
-        "use": "@vercel/node"
+        "name": "frontend",
+        "rootDirectory": "PetPalFrontend",
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
       },
       {
-        "src": "PetPalFrontend/package.json",
-        "use": "@vercel/static-build"
+        "name": "backend",
+        "rootDirectory": "PetPalBackend"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "PetPalBackend/index.js"
+        "dest": "PetPalBackend/$1"
       },
       {
         "src": "/(.*)",
