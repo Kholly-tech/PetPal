@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Cookies from 'js-cookie'
-import store from "../store";
+// import store from "../store";
 
 const token = Cookies.get('access_token');
 

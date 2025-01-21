@@ -13,9 +13,9 @@ const ComingSoon = () => {
       <h1 className="text-4xl lg:text-5xl md:text-5xl font-bold animate-pulse">
             Coming Soon
         </h1>
-      <div class="mt-2 mb-5">
-          <div class="shadow w-screen bg-white mt-2 max-w-[300px] sm:max-w-[350px] mx-auto rounded-full">
-              <div class="rounded-full bg-primary text-xs leading-none text-center text-white py-1 w-3/4">75%</div>
+      <div className="mt-2 mb-5">
+          <div className="shadow w-screen bg-white mt-2 max-w-[300px] sm:max-w-[350px] mx-auto rounded-full">
+              <div className="rounded-full bg-primary text-xs leading-none text-center text-white py-1 w-3/4">75%</div>
           </div>
       </div>
         
