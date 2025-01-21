@@ -2,7 +2,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 export const serverUrl = 'http://localhost:5001';
-export const apiUrl = `${serverUrl}/api`;
+export const apiUrl = `/api`;
+// export const apiUrl = `${serverUrl}/api`;
 
 const axiosInstance = axios.create({
     withCredentials: true,
