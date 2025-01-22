@@ -1,5 +1,8 @@
 require('dotenv').config();
 require('module-alias/register');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 const path = require('path');
 const { fileURLToPath } = require('url');
 const express = require('express');
@@ -60,3 +63,5 @@ mongoose.connect(process.env.DATABASE_URI).then(()=> {
 }).catch((error)=> {
     console.log('DB Connection Error: ', error);
 })
+
+module.exports = app;
