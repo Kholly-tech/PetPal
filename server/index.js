@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('module-alias/register');
-import path from 'path';
-import { fileURLToPath } from 'url';
+const path = require('path');
+const { fileURLToPath } = require('url');
 const express = require('express');
 const { default: mongoose } = require('mongoose');
 const helmet = require('helmet');
@@ -16,8 +16,8 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const server = http.createServer(app);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const _filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(_filename);
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -38,18 +38,18 @@ readdirSync('./App/Routes').map((r) =>
     app.use('/api/', require(`./App/Routes/${r}`))
 );
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../client/dist")));
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname, "../client/dist")));
   
-    app.get("*", (req, res) => {
-      return res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-    });
-  }
+//     app.get("*", (req, res) => {
+//       return res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+//     });
+//   }
 
 // // Handle unknown routes
-// app.use((req, res, next) => {
-//     resSender(res, 404, 'Route not found', 'error');
-// })
+app.use((req, res, next) => {
+    resSender(res, 404, 'Route not found', 'error');
+})
 
 // Database Connection
 mongoose.connect(process.env.DATABASE_URI).then(()=> {

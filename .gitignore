@@ -17,6 +17,9 @@ node_modules
 /PetPalFrontend/.env
 /PetPalBackend/.env
 
+# config files
+# vercel.json
+
 # Build directories
 dist
 dist-ssr
