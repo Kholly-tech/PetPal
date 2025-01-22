@@ -7,7 +7,7 @@ const Blog = () => {
   
   if (state.succeeded) {
     return (
-      <div className="min-h-screen bg-bg flex items-center justify-center">
+      <div className="min-h-[calc(100vh-70px)] bg-bg flex items-center justify-center">
         {/* <div className="bg-white p-8 rounded-lg shadow-lg text-center">
           <h2 className="text-primary text-2xl font-bold">Thank you for subscribing!</h2>
           <p className="text-lightBlack mt-2">We'll keep you updated with our latest pet news.</p>
@@ -17,7 +17,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black py-12 px-4">
+    <div className="min-h-[calc(100vh-70px)] bg-black py-12 px-4">
       {/* <div className="max-w-2xl mx-auto bg-black rounded-xl shadow-lg p-8">
         <h1 className="text-3xl font-bold text-white mb-6 text-center">APPLICATION FORM</h1>
         

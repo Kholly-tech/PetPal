@@ -24,7 +24,7 @@ const Contact = () => {
     try {
         setLoading(true);
       e.preventDefault();
-      console.log('Form Data:', formData);
+    //   console.log('Form Data:', formData);
       // Add your API call here
       setShowPopup(true);
     } catch (error) {

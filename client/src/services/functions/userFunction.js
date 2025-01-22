@@ -5,7 +5,7 @@ export const getUser = async() => {
         const res = await getDataAPI('user');
         return res;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         throw error;
     }
 };

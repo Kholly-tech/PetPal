@@ -53,7 +53,7 @@ const userSchema = mongoose.Schema({
         enum: ["single", "married", "in a relationship", "divorced"],
         default: "single",
     }
-});
+},{timeStamps: true});
 
 const User = mongoose.model("User", userSchema);
 

@@ -1,7 +1,12 @@
 import axios from "axios";
 import Cookies from "js-cookie";
+export let serverUrl= '';
+if(process.env.NODE_ENV === 'development') {
+    serverUrl = 'http://localhost:5001';
+} else {
+  serverUrl = 'https://api-petpal.vercel.app/';
+}
 
-export const serverUrl = 'https://pet-pal-gules.vercel.app';
 // export const apiUrl = `/api`;
 export const apiUrl = `${serverUrl}/api`;
 
@@ -17,7 +22,8 @@ const refreshAccessToken = async () => {
         Cookies.set('access_token', accessToken);
         return accessToken;
     } catch (error) {
-        console.log(error);
+      throw error;
+        // console.log(error);
     }
 };
 

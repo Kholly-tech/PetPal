@@ -12,7 +12,7 @@ export const signin = async (userData) => {
         });
         return res;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         throw error;
     }
 };
@@ -22,7 +22,7 @@ export const signup = async (userData) => {
         const res = await postDataAPI('auth/signup', userData);
         return res;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         throw error;
     }
 };
@@ -32,7 +32,7 @@ export const forgetPassword = async (userData) => {
         const res = await postDataAPI('auth/forget-password', userData);
         return res;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         throw error;
     }
 };

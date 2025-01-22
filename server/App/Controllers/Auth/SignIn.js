@@ -58,7 +58,7 @@ const signIn = async (req, res) => {
         });
         return resSender(res, 200, 'Log In Successful', 'success', data);
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         resSender(res, 500, 'Server error', 'error');
     }
 }

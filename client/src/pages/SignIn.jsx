@@ -30,7 +30,7 @@ const SignIn = () => {
         password: formData.password,
       }
       const response = await signin(userData);
-      console.log(response)
+      // console.log(response)
       
       if (response.status === 'success') {
         dispatch(setIsAuthenticated(true))
@@ -45,7 +45,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 md:px-0 bg-bg">
+    <div className="min-h-[calc(100vh-70px)] flex items-center justify-center px-4 md:px-0 bg-bg">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-primary">Welcome Back!</h2>

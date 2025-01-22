@@ -7,7 +7,7 @@ const Layout = () => {
     return (
       <div className="min-h-screen">
         <NavBar />
-        <main className="w-full">
+        <main className="w-full min-h-[calc(100vh-70px)]">
           <Outlet />
         </main>
         <Footer />

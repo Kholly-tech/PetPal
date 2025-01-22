@@ -4,7 +4,7 @@ const PetGallery = ({petImages}) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 w-full">
         {petImages.map((pet, index) => (
-            <div key={index} className="aspect-square overflow-hidden">
+            <div key={index} className="aspect-square rounded-lg overflow-hidden">
                 <img 
                     src={pet.url} 
                     alt={pet.alt}

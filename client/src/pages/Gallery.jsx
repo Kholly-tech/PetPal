@@ -10,7 +10,7 @@ const Gallery = () => {
           <h1 className='text-4xl font-semibold p-2'>Gallery</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 py-1 w-full">
           {petImages.map((pet, index) => (
-              <div key={index} className="aspect-square overflow-hidden">
+              <div key={index} className="aspect-square rounded-lg overflow-hidden">
                   <img
                       src={pet.url}
                       alt={pet.alt}

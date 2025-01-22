@@ -5,6 +5,7 @@ import PopUp from "../UI/PopUp";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Socials from "./Socials";
 import InfoCard from "../UI/InfoCard";
+import { regForNews } from "../../services/functions/newsFunction";
 
 const Footer = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -20,10 +21,13 @@ const Footer = () => {
       setError("");
       setSuccessMessage("");
       // console.log("Email:", email);
-      if (email) setShowPopup(true);
+      if (email) {
+        const res = await regForNews(email);
+        setShowPopup(true);
+      }
     } catch (error) {
       console.error("Error submitting email:", error);
-      setError("An error occurred. Please try again later.");
+      setError(error?.message ||"An error occurred. Please try again later.");
     } finally {
       setLoading(false);
       setEmail("");
@@ -58,6 +62,11 @@ const Footer = () => {
             Stay updated on new pets and adoption events!
           </p>
           <div className="w-full sm:max-w-[350px] px-8">
+            {error && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {error}
+              </div>
+            )}
             <Input
               placeholder="Email"
               type={'email'}

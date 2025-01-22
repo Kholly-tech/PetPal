@@ -14,6 +14,8 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import Forget_Password from '../components/auth/Forget-Password';
 import Profile from '../pages/Profile';
+import {FullScreenLoading} from '../components/UI/Loadings';
+import Adoption from '../pages/Adoption';
 
 // Protected Routes
 const ProtectedRoutes = () => {
@@ -29,7 +31,7 @@ const ProtectedRoutes = () => {
     try {
       setLoading(true);
       const res = await getUser();
-      console.log('Res: ',res);
+      // console.log('Res: ',res);
       dispatch(setCurrentUser(res.data));
     } catch (error) {
       setError('Error connecting to the server');
@@ -46,7 +48,7 @@ const ProtectedRoutes = () => {
     }
   }, [isAuthenticated, dispatch]);
 
-  if(loading) return <h1>Loading the Page</h1>;
+  if(loading) return <FullScreenLoading />;
   if(!isAuthenticated) return <SignIn />;
   if(currentUser){
     switch (currentUser.isVerified) {
@@ -108,7 +110,7 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
           {path: '/profile', element: <Profile />},
-          {path: '/adoption', element: <ComingSoon />},
+          {path: '/adoption', element: <Adoption />},
           {path: '/blog', element: <Blog />},
           {path: '/gallery', element: <Gallery />},
           {path: '/about', element: <ComingSoon />},

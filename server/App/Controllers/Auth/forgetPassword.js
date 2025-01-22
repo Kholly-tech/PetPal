@@ -21,7 +21,7 @@ const forgetPassword = async (req, res) => {
 
         return resSender(res, 200, 'Mail Sent', 'success');
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return resSender(res, 500, 'Server Error', 'error');
     }
 };

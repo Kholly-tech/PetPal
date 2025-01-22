@@ -41,24 +41,23 @@ readdirSync('./App/Routes').map((r) =>
     app.use('/api/', require(`./App/Routes/${r}`))
 );
 
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static(path.join(__dirname, "../client/dist")));
-  
-//     app.get("*", (req, res) => {
-//       return res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-//     });
-//   }
-
 // // Handle unknown routes
 app.use((req, res, next) => {
     resSender(res, 404, 'Route not found', 'error');
 })
 
 // Database Connection
-mongoose.connect(process.env.DATABASE_URI).then(()=> {
+let dbUri;
+if (process.env.NODE_ENV === "production") {
+    dbUri = process.env.DATABASE_URI
+  }else{
+    dbUri = process.env.LOCAL_DATABASE_URI
+  }
+
+mongoose.connect(dbUri).then(()=> {
     console.log('Connected to DB');
     server.listen(PORT,() => {
-        console.log(`Server Listening on Port: ${PORT}`);
+        console.log(`Server Listening`);
     });
 }).catch((error)=> {
     console.log('DB Connection Error: ', error);

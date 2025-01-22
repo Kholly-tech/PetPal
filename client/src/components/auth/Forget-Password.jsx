@@ -32,7 +32,7 @@ const Forget_Password = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-bg">
+    <div className="min-h-[calc(100vh-70px)] flex items-center justify-center bg-bg">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-primary">Reset Password</h2>

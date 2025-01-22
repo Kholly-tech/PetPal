@@ -17,7 +17,7 @@ import { petImages } from "../assets/DemoData/DemoPets";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full min-h-[calc(100vh-3rem)] bg-bg ">
+    <div className="w-full min-h-[calc(100vh-70px)] bg-bg ">
       <div className="items-center justify-center text-center mx-auto sm: md:max-w-2xl lg:max-w-4xl">
         <div className="text-primary text-4xl max-w-2xl mx-auto font-normal pt-12">
           Find Your Furry Forever Friend Today – Adopt,
