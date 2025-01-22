@@ -4,7 +4,7 @@ export let serverUrl= '';
 if(process.env.NODE_ENV === 'development') {
     serverUrl = 'http://localhost:5001';
 } else {
-  serverUrl = 'https://api-petpal.vercel.app/';
+  serverUrl = 'https://api-petpal.vercel.app';
 }
 
 // export const apiUrl = `/api`;

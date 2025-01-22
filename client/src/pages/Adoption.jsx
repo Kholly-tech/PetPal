@@ -7,10 +7,10 @@ const Adoption = () => {
     const [stage, setStage] = useState(1);
     const [formData, setFormData] = useState({
         // Personal Information
-        fullName: 'Kola',
-        address: 'Agbowo',
-        phone: '09076889241',
-        ownership: 'rent',
+        fullName: '',
+        address: '',
+        phone: '',
+        ownership: '',
         householdMembers: '',
         currentPets: '',
         petExperience: '',
