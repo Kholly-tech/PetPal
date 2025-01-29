@@ -51,7 +51,10 @@ const Blog = () => {
           </button>
         </div>
 
-        {loading? <div className='spinner border-t-red-600 w-24 h-24 border-3 mt-60 max-w-6xl mx-auto '></div> :(
+        {loading? <div className='spinner border-t-red-600 w-24 h-24 border-3 mt-60 max-w-6xl mx-auto '></div> : blogs.length < 1 ? (
+          <div className='flex flex-col justify-center items-center h-[50vh]'>
+            <p className='text-3xl font-medium'>No blogs yet</p>
+          </div> ):(
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogs.map((blog) => (
               <div key={blog._id} className="bg-white rounded-lg shadow-lg overflow-hidden">

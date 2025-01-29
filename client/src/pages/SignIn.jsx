@@ -52,12 +52,6 @@ const SignIn = () => {
           <p className="text-lightBlack mt-2">Sign in to continue to PetPal</p>
         </div>
 
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            {error}
-          </div>
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="identifier" className="block text-semiBlack font-medium mb-2">
@@ -105,6 +99,12 @@ const SignIn = () => {
               Forgot Password?
             </Link>
           </div>
+
+          {error && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+              {error}
+            </div>
+          )}
 
           <button
             type="submit"

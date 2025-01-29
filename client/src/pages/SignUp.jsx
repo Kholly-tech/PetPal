@@ -67,12 +67,6 @@ const SignUp = () => {
           <p className="text-lightBlack mt-2">Join PetPal today</p>
         </div>
 
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            {error}
-          </div>
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className='md:flex gap-4'>
               <div>
@@ -217,6 +211,12 @@ const SignUp = () => {
               </Link>
             </label>
           </div>
+
+          {error && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+              {error}
+            </div>
+          )}
 
           <button
             type="submit"
