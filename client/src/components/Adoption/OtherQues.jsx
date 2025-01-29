@@ -10,11 +10,11 @@ const OtherQues = ({formData, handleChange}) => {
             <textarea 
                 placeholder="What would be your plan if you need to travel?" 
                 name='travelPlan' value={formData.travelPlan} onChange={handleChange}
-                className="w-full p-2 border rounded" 
+                className="w-full p-2 border outline-none rounded resize-none" 
                 rows="3"
             ></textarea>
 
-            <select name='vetCosts' value={formData.vetCosts} onChange={handleChange} className="w-full p-2 border rounded">
+            <select name='vetCosts' value={formData.vetCosts} onChange={handleChange} className="w-full p-2 border outline-none rounded">
                 <option value="">Are you prepared for emergency vet costs?</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -24,11 +24,11 @@ const OtherQues = ({formData, handleChange}) => {
             <textarea 
                 placeholder="How do you plan to train/socialize your new pet?" 
                 name='training' value={formData.training} onChange={handleChange}
-                className="w-full p-2 border rounded" 
+                className="w-full p-2 border outline-none rounded resize-none" 
                 rows="3"
             ></textarea>
 
-            <select name='yardFenced' value={formData.yardFenced} onChange={handleChange} className="w-full p-2 border rounded">
+            <select name='yardFenced' value={formData.yardFenced} onChange={handleChange} className="w-full p-2 border outline-none rounded">
                 <option value="">Is your yard fenced? (if applicable)</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -38,7 +38,7 @@ const OtherQues = ({formData, handleChange}) => {
             <textarea 
                 placeholder="What would make you consider returning/surrendering a pet?" 
                 name='surrenderReason' value={formData.surrenderReason} onChange={handleChange}
-                className="w-full p-2 border rounded" 
+                className="w-full p-2 border outline-none rounded resize-none" 
                 rows="3"
             ></textarea>
         </div>

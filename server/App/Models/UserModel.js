@@ -52,8 +52,13 @@ const userSchema = mongoose.Schema({
         type: String,
         enum: ["single", "married", "in a relationship", "divorced"],
         default: "single",
+    },
+    role: {
+        type: String,
+        enum: ['member', 'admin'],
+        default: 'member',
     }
-},{timeStamps: true});
+}, {timestamps: true});
 
 const User = mongoose.model("User", userSchema);
 

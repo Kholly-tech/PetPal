@@ -52,7 +52,7 @@ const Home = () => {
             "mt-8 py-3 px-10 bg-secondary text-primary rounded-full  font-medium"
           }
           loading={false}
-          onClick={() => {window.open('https://wa.me/2349076889241', '_blank');}}
+          onClick={() => {navigate('/adoption')}}
         />
       </div>
 

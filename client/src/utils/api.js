@@ -17,7 +17,7 @@ const axiosInstance = axios.create({
 
 const refreshAccessToken = async () => {
     try {
-        const res = await axiosInstance.post('/auth/refresh');
+        const res = await axiosInstance.put('/auth/refresh');
         const { accessToken } = res.data;
         Cookies.set('access_token', accessToken);
         return accessToken;
@@ -125,6 +125,19 @@ export const getDataAPI = async (url, onProgress) => {
       return res.data;
     } catch (error) {
       console.error("Error deleting data:", error);
+      throw error.response.data;
+    }
+  };
+
+  export const postMediaAPI = async (url, post, onProgress) => {
+    try {
+      const res = await axiosInstance.post(url, post, {
+        headers: { "Content-Type": "multipart/form-data" },
+        onUploadProgress: onProgress,
+      });
+      return res.data;
+    } catch (error) {
+      console.error("Error posting media:", error);
       throw error.response.data;
     }
   };

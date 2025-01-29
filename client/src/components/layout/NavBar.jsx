@@ -59,7 +59,7 @@ const NavBar = () => {
               </div>
               <p className="font-medium text-white capitalize">{currentUser?.username}</p>
           </Link>
-          <div className=" w-12 h-10 mt-3.5"
+          <div className=" w-12 h-10 mt-2.5"
             onClick={() => setIsOpen(!isOpen)}>
             <Button
               title={<Icon icon={"fa:navicon"} className="text-secondary" width={46} height={34} />}

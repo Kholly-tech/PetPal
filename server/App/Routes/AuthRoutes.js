@@ -1,5 +1,4 @@
-const {authMiddleware} = require('@Middlewares');
-const { signIn, signUp, forgetPassword } = require('../Controllers/Auth');
+const { signIn, signUp, forgetPassword, refreshToken } = require('../Controllers/Auth');
 
 const router = require('express').Router();
 
@@ -7,6 +6,6 @@ const router = require('express').Router();
 router.post('/auth/signin', signIn);
 router.post('/auth/signup', signUp);
 router.post('/auth/forget-password', forgetPassword);
-
+router.put('/auth/refresh', refreshToken);
 
 module.exports = router;

@@ -46,6 +46,7 @@ const signIn = async (req, res) => {
                 username: user.username,
                 profilePicture: user.profilePicture,
                 isVerified: user.isVerified,
+                role: user.role
             },
             token
         };

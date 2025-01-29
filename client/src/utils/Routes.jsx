@@ -16,6 +16,7 @@ import Forget_Password from '../components/auth/Forget-Password';
 import Profile from '../pages/Profile';
 import {FullScreenLoading} from '../components/UI/Loadings';
 import Adoption from '../pages/Adoption';
+import ViewBlog from '../components/Blog/ViewBlog';
 
 // Protected Routes
 const ProtectedRoutes = () => {
@@ -112,6 +113,7 @@ const router = createBrowserRouter([
           {path: '/profile', element: <Profile />},
           {path: '/adoption', element: <Adoption />},
           {path: '/blog', element: <Blog />},
+          {path: '/blog/:blogId', element: <ViewBlog />},
           {path: '/gallery', element: <Gallery />},
           {path: '/about', element: <ComingSoon />},
           {path: '/contact', element: <Contact />},

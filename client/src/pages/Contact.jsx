@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-      <div className='bg-bg'>
+      <div className='bg-bg min-h-[calc(100vh-70px)]'>
           <div className="max-w-4xl mx-auto bg-bg px-4 py-8">
               <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
                   Get in Touch with PetPal

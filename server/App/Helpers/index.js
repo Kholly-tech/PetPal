@@ -2,7 +2,7 @@ const { saveCookie, getCookie } = require("./cookieHelper");
 const modifyUserResponse = require("./modifyUserResponse");
 const {resSender} = require("./resSender");
 const { generateTokens, verifyToken } = require("./tokenHelper");
-
+const {mediaUpload, fetchMedia, deleteMedia} = require('./mediaStorage');
 module.exports = {
     resSender,
     generateTokens,
@@ -10,4 +10,7 @@ module.exports = {
     saveCookie,
     getCookie,
     modifyUserResponse,
+    mediaUpload,
+    fetchMedia,
+    deleteMedia,
 }

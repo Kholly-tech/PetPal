@@ -12,6 +12,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const corsConfig = require('./App/Config/corsConfig');
 const fileUpload = require('express-fileupload');
+const bodyParser = require('body-parser');
 const http = require('http');
 const { readdirSync } = require('fs');
 const { resSender } = require('./App/Helpers');
@@ -27,6 +28,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(helmet());
 app.use(cors(corsConfig))
 app.use(morgan('dev'));
+
+app.use(bodyParser.json());
 app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: '/temp/'
