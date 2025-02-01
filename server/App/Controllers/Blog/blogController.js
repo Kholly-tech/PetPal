@@ -6,22 +6,22 @@ const {Blog} = require('../../Models');
 const addBlog = async (req, res) => {
     try {
         const userId = req.user._id;
-        const {title, desc, content, medias} = req.body;
+        const {title, description, content} = req.body;
 
         const schema = Joi.object({
             title: validator.strings,
-            desc: validator.strings,
+            description: validator.strings,
             content: validator.strings,
-            medias: validator.medias
+            // medias: validator.medias
         });
         const {error} = schema.validate(req.body);
         if(error) return resSender(res, 400, error.details[0].message, 'fail');
 
         const newBlog = new Blog({
             title,
-            description: desc,
+            description,
             content,
-            medias
+            // medias
         });
         await newBlog.save();
 

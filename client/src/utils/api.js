@@ -76,7 +76,7 @@ export const getDataAPI = async (url, onProgress) => {
       });
       return res.data;
     } catch (error) {
-      console.error("Error fetching data:", error);
+      // console.error("Error fetching data:", error);
       throw error.response.data;
     }
   };
@@ -88,7 +88,7 @@ export const getDataAPI = async (url, onProgress) => {
       });
       return res.data;
     } catch (error) {
-      console.error("Error posting data:", error);
+      // console.error("Error posting data:", error);
       throw error.response.data;
     }
   };
@@ -100,7 +100,7 @@ export const getDataAPI = async (url, onProgress) => {
       });
       return res.data;
     } catch (error) {
-      console.error("Error updating data:", error);
+      // console.error("Error updating data:", error);
       throw error.response.data;
     }
   };
@@ -112,7 +112,7 @@ export const getDataAPI = async (url, onProgress) => {
       });
       return res.data;
     } catch (error) {
-      console.error("Error patching data:", error);
+      // console.error("Error patching data:", error);
       throw error.response.data;
     }
   };
@@ -124,7 +124,7 @@ export const getDataAPI = async (url, onProgress) => {
       });
       return res.data;
     } catch (error) {
-      console.error("Error deleting data:", error);
+      // console.error("Error deleting data:", error);
       throw error.response.data;
     }
   };

@@ -17,6 +17,7 @@ import Profile from '../pages/Profile';
 import {FullScreenLoading} from '../components/UI/Loadings';
 import Adoption from '../pages/Adoption';
 import ViewBlog from '../components/Blog/ViewBlog';
+import BlogEditor from '../components/Blog/BlogEditor';
 
 // Protected Routes
 const ProtectedRoutes = () => {
@@ -113,6 +114,7 @@ const router = createBrowserRouter([
           {path: '/profile', element: <Profile />},
           {path: '/adoption', element: <Adoption />},
           {path: '/blog', element: <Blog />},
+          {path: '/blog/add', element: <BlogEditor />},
           {path: '/blog/:blogId', element: <ViewBlog />},
           {path: '/gallery', element: <Gallery />},
           {path: '/about', element: <ComingSoon />},

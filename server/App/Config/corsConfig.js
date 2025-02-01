@@ -2,6 +2,7 @@ const clientUrl = process.env.CLIENT_URL;
 const allowedUrls = [
     clientUrl,
     'http://192.168.1.25:5173',
+    'http://localhost:5174',
 ]
 const corsConfig = {
     origin: (origin, callback) => {
